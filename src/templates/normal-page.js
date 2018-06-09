@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/Content'
 
-export const SupportPage = ({ title, content, contentComponent }) => {
+export const NormalPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -23,17 +23,17 @@ export const SupportPage = ({ title, content, contentComponent }) => {
   )
 }
 
-SupportPage.propTypes = {
+NormalPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({ data }) => {
+const NormalPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <SupportPage
+    <NormalPageTemplate
       contentComponent={HTMLContent}
       title={post.frontmatter.title}
       content={post.html}
@@ -41,14 +41,14 @@ const AboutPage = ({ data }) => {
   )
 }
 
-AboutPage.propTypes = {
+NormalPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default AboutPage
+export default NormalPage
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const normalPageQuery = graphql`
+  query NormalPageTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

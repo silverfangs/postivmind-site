@@ -1,19 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { SupportPage } from '../../templates/support-page'
+import { NormalPage } from '../../templates/normal-page'
 
-const SupportPagePreview = ({ entry, widgetFor }) => (
-  <SupportPage
+const NormalPagePreview = ({ entry, widgetFor }) => (
+  <NormalPage
     title={entry.getIn(['data', 'title'])}
     content={widgetFor('body')}
   />
 )
 
-SupportPagePreview.propTypes = {
+NormalPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 }
 
-export default SupportPagePreview
+export default NormalPagePreview
