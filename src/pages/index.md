@@ -2,7 +2,7 @@
 templateKey: home-page
 title: Stay Positive
 image: /img/jumbotron.jpg
-heading: Stay Positive
+heading: About Us | 关于我们
 description: >-
   "Negativity" has tremendously damaging the lively in this world. It has
   separated us from being success and happy in life. Everyday, you open up the
