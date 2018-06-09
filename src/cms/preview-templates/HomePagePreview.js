@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { HomePageTemplate } from '../../templates/test'
+import { HomePageTemplate } from '../../templates/home-page'
 
 const HomePagePreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
@@ -16,7 +16,8 @@ const HomePagePreview = ({ entry, getAsset }) => {
     <HomePageTemplate
       image={entry.getIn(['data', 'image'])}
       title={entry.getIn(['data', 'title'])}
-      heading={entry.getIn(['data', 'heading'])}
+      heading1={entry.getIn(['data', 'heading1'])}
+      heading2={entry.getIn(['data', 'heading2'])}
       description={entry.getIn(['data', 'description'])}
       intro={{ blurbs }}
       main={{

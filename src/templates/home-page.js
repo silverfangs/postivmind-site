@@ -7,7 +7,8 @@ import Pricing from '../components/Pricing'
 export const HomePageTemplate = ({
   image,
   title,
-  heading,
+  heading1,
+  heading2,
   description,
   intro,
   main,
@@ -27,7 +28,7 @@ export const HomePageTemplate = ({
                 className="full-width-image-container margin-top-0"
                 style={{ backgroundImage: `url(${image})` }}
               >
-                <h2
+                <h1
                   className="has-text-weight-bold is-size-1"
                   style={{
                     boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
@@ -37,21 +38,25 @@ export const HomePageTemplate = ({
                   }}
                 >
                   {title}
-                </h2>
+                </h1>
               </div>
 
               <div className="columns is-centered">
                 <div className="column is-10">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    {heading}
-                  </h3>
+                  <h2 className="has-text-weight-semibold is-size-2">
+                    {heading1}
+                  </h2>
                   <p>{description}</p>
                 </div>
               </div>
-              {/* <div
+              <div
                 className="full-width-image-container"
                 style={{ backgroundImage: `url(${fullImage})` }}
-              /> */}
+              />
+              
+              <h2 className="has-text-weight-semibold is-size-2">
+                {heading2}
+              </h2>
               <Testimonials testimonials={testimonials} />
             </div>
           </div>
@@ -61,29 +66,30 @@ export const HomePageTemplate = ({
   </section>
 )
 
-HomePageTemplate.propTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-  main: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    image1: PropTypes.object,
-    image2: PropTypes.object,
-    image3: PropTypes.object,
-  }),
-  testimonials: PropTypes.array,
-  fullImage: PropTypes.string,
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  }),
-}
+// HomePageTemplate.propTypes = {
+//   image: PropTypes.string,
+//   title: PropTypes.string,
+//   heading1: PropTypes.string,
+//   heading2: PropTypes.string,
+//   description: PropTypes.string,
+//   intro: PropTypes.shape({
+//     blurbs: PropTypes.array,
+//   }),
+//   main: PropTypes.shape({
+//     heading: PropTypes.string,
+//     description: PropTypes.string,
+//     image1: PropTypes.object,
+//     image2: PropTypes.object,
+//     image3: PropTypes.object,
+//   }),
+//   testimonials: PropTypes.array,
+//   fullImage: PropTypes.string,
+//   pricing: PropTypes.shape({
+//     heading: PropTypes.string,
+//     description: PropTypes.string,
+//     plans: PropTypes.array,
+//   }),
+// }
 
 const ProductPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
@@ -92,7 +98,8 @@ const ProductPage = ({ data }) => {
     <HomePageTemplate
       image={frontmatter.image}
       title={frontmatter.title}
-      heading={frontmatter.heading}
+      heading1={frontmatter.heading1}
+      heading2={frontmatter.heading2}
       description={frontmatter.description}
       intro={frontmatter.intro}
       main={frontmatter.main}
@@ -103,13 +110,13 @@ const ProductPage = ({ data }) => {
   )
 }
 
-ProductPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
+// ProductPage.propTypes = {
+//   data: PropTypes.shape({
+//     markdownRemark: PropTypes.shape({
+//       frontmatter: PropTypes.object,
+//     }),
+//   }),
+// }
 
 export default ProductPage
 
@@ -119,47 +126,14 @@ export const productPageQuery = graphql`
       frontmatter {
         title
         image
-        heading
+        heading1
         description
-        intro {
-          blurbs {
-            image
-            text
-          }
-          heading
-          description
-        }
-        main {
-          heading
-          description
-          image1 {
-            alt
-            image
-          }
-          image2 {
-            alt
-            image
-          }
-          image3 {
-            alt
-            image
-          }
-        }
+        heading2
         testimonials {
           author
           quote
         }
         full_image
-        pricing {
-          heading
-          description
-          plans {
-            description
-            items
-            plan
-            price
-          }
-        }
       }
     }
   }

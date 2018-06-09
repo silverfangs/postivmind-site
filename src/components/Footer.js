@@ -14,7 +14,7 @@ const Footer = () => (
     <div className="container">
       <div className="content has-text-centered">
         <p>
-          Built with <span class="icon has-text-danger"><i className="fas fa-heart"></i></span> from Postivmind.org Team
+          Built with <span className="icon has-text-danger"><i className="fas fa-heart"></i></span> from Postivmind.org Team
           <br/>
           &copy; {currentYear} Postivmind.org
         </p>
