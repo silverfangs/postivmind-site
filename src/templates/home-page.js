@@ -19,7 +19,6 @@ export const HomePageTemplate = ({
   fullImage
 }) => {
   description = marked(description);
-  console.log(description);
 
   return (
     <section className="section section--gradient">
@@ -31,7 +30,7 @@ export const HomePageTemplate = ({
   
                 {/* Hero banner */}
                 <div
-                  className="full-width-image-container margin-top-0"
+                  className="full-width-image-container type--parallax margin-top-0"
                   style={{ backgroundImage: `url(${image})` }}
                 >
                   <h1
@@ -56,7 +55,7 @@ export const HomePageTemplate = ({
                   </div>
                 </div>
                 <div
-                  className="full-width-image-container"
+                  className="full-width-image-container type--parallax"
                   style={{ backgroundImage: `url(${fullImage})` }}
                 />
                 
@@ -73,30 +72,15 @@ export const HomePageTemplate = ({
   )
 }
 
-// HomePageTemplate.propTypes = {
-//   image: PropTypes.string,
-//   title: PropTypes.string,
-//   heading1: PropTypes.string,
-//   heading2: PropTypes.string,
-//   description: PropTypes.string,
-//   intro: PropTypes.shape({
-//     blurbs: PropTypes.array,
-//   }),
-//   main: PropTypes.shape({
-//     heading: PropTypes.string,
-//     description: PropTypes.string,
-//     image1: PropTypes.object,
-//     image2: PropTypes.object,
-//     image3: PropTypes.object,
-//   }),
-//   testimonials: PropTypes.array,
-//   fullImage: PropTypes.string,
-//   pricing: PropTypes.shape({
-//     heading: PropTypes.string,
-//     description: PropTypes.string,
-//     plans: PropTypes.array,
-//   }),
-// }
+HomePageTemplate.propTypes = {
+  image: PropTypes.string,
+  title: PropTypes.string,
+  heading1: PropTypes.string,
+  heading2: PropTypes.string,
+  description: PropTypes.string,
+  testimonials: PropTypes.array,
+  fullImage: PropTypes.string,
+}
 
 const ProductPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
@@ -114,13 +98,13 @@ const ProductPage = ({ data }) => {
   )
 }
 
-// ProductPage.propTypes = {
-//   data: PropTypes.shape({
-//     markdownRemark: PropTypes.shape({
-//       frontmatter: PropTypes.object,
-//     }),
-//   }),
-// }
+ProductPage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
+}
 
 export default ProductPage
 
