@@ -9,9 +9,9 @@ tags:
   - 励志视频
   - Motivation video
 ---
-[![机会 Opportunity](http://img.youtube.com/vi/brMFjMjAP0E/0.jpg)](http://www.youtube.com/watch?v=brMFjMjAP0E "机会 Opportunity")
-
-<iframe style="position: absolute; top: 0;left: 0;width: 100%; height: 100%;" width="560" height="315" src="https://www.youtube.com/embed/brMFjMjAP0E" frameborder="0" allowfullscreen=""></iframe>
+<div style="position: relative;padding-bottom: 56.25%;padding-top: 25px;height: 0;">  
+<iframe style="position: absolute; top: 0;left: 0;width: 100%; height: 100%;" width="560" height="315" src="https://www.youtube.com/embed/brMFjMjAP0E" frameborder="0" allowfullscreen=""></iframe>  
+</div>
 
 **Opportunity** **机会** - is a video to motivate any person, let it be in your business, sports, working, education, or any circumstances. It can help you to empower and realise your true potential. Opportunity is everywhere. Do you ever felt that you once let a good opportunity slip through you? My friend, stay alert all the time, opportunity doesn't walk barely in front you or as audible as knocking your front door. Be aware and knowledgeable about your surrounding, you'll end up noticed it.
 
