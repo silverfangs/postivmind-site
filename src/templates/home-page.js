@@ -89,6 +89,7 @@ export const HomePageTemplate = ({
 // }
 
 const ProductPage = ({ data }) => {
+  // console.log(data);
   const { frontmatter } = data.markdownRemark
 
   return (
