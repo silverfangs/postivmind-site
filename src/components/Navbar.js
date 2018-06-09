@@ -16,9 +16,6 @@ const Navbar = () => (
         <Link className="navbar-item" to="/blog">
           Blog
         </Link>
-        <Link className="navbar-item" to="/about">
-          关于我们 About us
-        </Link>
         <Link className="navbar-item" to="/support">
           支持我们 Support us
         </Link>
