@@ -1,6 +1,6 @@
 ---
 templateKey: normal-page
-title: Support us
+title: Support us • 支持我们
 ---
 The works that we do are totally **free and will be free forever**. The reason we do this, is that we doesn't know, for example one day a person, who is very sad and maybe can't move on with his/her life again. **We always hope that our works will reach this kind of person, and enable to give him/her strength again to move forward and courageously facing each day challenges**.
 
