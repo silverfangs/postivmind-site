@@ -1,0 +1,9 @@
+.ptm-blog-post {
+    &__title {
+        font-size: 1.375rem;
+    }
+
+    &:not(:last-child) {
+        border-bottom: 0.0625rem solid #eaecee;
+    }
+}

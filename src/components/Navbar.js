@@ -17,7 +17,7 @@ const Navbar = () => (
           Blog
         </Link>
         <Link activeClassName="has-text-primary" className="navbar-item" to="/support">
-          支持我们 Support us
+          Support us 支持我们
         </Link>
       </div>
     </div>
