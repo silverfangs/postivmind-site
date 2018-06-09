@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import logo from '../img/logo.png'
 
 const Navbar = () => (
-  <nav className="navbar is-transparent">
+  <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">

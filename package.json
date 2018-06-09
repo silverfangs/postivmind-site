@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
+  "name": "postivmind-site",
+  "description": "Site for Postivmind.org",
   "version": "1.1.3",
-  "author": "Austin Green",
+  "author": "Silverfangs",
   "dependencies": {
     "bulma": "^0.6.0",
     "gatsby": "^1.9.213",
@@ -16,9 +16,9 @@
     "gatsby-source-filesystem": "^1.5.23",
     "gatsby-transformer-remark": "^1.7.33",
     "gatsby-transformer-sharp": "^1.6.21",
-    "netlify-cms": "^1.7.0",
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
+    "netlify-cms": "^1.7.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-helmet": "^5.2.0",
@@ -38,6 +38,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "prettier": "^1.7.4"
   }
 }
