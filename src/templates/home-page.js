@@ -24,6 +24,7 @@ const options = {
   backDelay: 1200,
   shuffle: true,
   loop: true,
+  loopCount: Infinity,
   cursorChar: ""
 }
 
