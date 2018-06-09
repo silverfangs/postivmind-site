@@ -2,7 +2,7 @@
 templateKey: home-page
 title: Stay Positive
 image: /img/view-1.jpg
-heading1: About Us | 关于我们
+heading1: About Us • 关于我们
 description: >-
   "Negativity" has tremendously damaging the lively in this world. It has
   separated us from being success and happy in life. Everyday, you open up the
