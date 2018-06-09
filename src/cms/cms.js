@@ -6,7 +6,7 @@ import NormalPagePreview from './preview-templates/NormalPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 
 CMS.registerPreviewStyle('/styles.css')
-// CMS.registerPreviewTemplate('home', HomePagePreview)
+CMS.registerPreviewTemplate('home-page', HomePagePreview)
 CMS.registerPreviewTemplate('normal', NormalPagePreview)
 // CMS.registerPreviewTemplate('blog', BlogPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)

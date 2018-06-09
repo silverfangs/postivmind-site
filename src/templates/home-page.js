@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
+import { HTMLContent } from '../components/Content'
 
 export const HomePageTemplate = ({
   image,
@@ -43,7 +44,7 @@ export const HomePageTemplate = ({
                   <h2 className="has-text-weight-semibold is-size-2">
                     {heading1}
                   </h2>
-                  <p>{description}</p>
+                  <HTMLContent className="content" content={description} />
                 </div>
               </div>
               <div
