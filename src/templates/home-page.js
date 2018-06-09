@@ -10,11 +10,8 @@ export const HomePageTemplate = ({
   heading1,
   heading2,
   description,
-  intro,
-  main,
   testimonials,
-  fullImage,
-  pricing,
+  fullImage
 }) => (
   <section className="section section--gradient">
     <div className="container">
@@ -101,11 +98,8 @@ const ProductPage = ({ data }) => {
       heading1={frontmatter.heading1}
       heading2={frontmatter.heading2}
       description={frontmatter.description}
-      intro={frontmatter.intro}
-      main={frontmatter.main}
       testimonials={frontmatter.testimonials}
       fullImage={frontmatter.full_image}
-      pricing={frontmatter.pricing}
     />
   )
 }
