@@ -9,7 +9,7 @@ tags:
   - 励志视频
   - Motivation video
 ---
-<div style="position: relative;padding-bottom: 56.25%;padding-top: 25px;height: 0;">  
+<div style="position: relative;padding-bottom: 56.25%;padding-top: 25px;height: 0; margin-bottom: 50px;">  
 <iframe style="position: absolute; top: 0;left: 0;width: 100%; height: 100%;" width="560" height="315" src="https://www.youtube.com/embed/brMFjMjAP0E" frameborder="0" allowfullscreen=""></iframe>  
 </div>
 
