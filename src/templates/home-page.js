@@ -1,5 +1,9 @@
+// Modules
 import React from 'react'
 import PropTypes from 'prop-types'
+import marked from 'marked';
+
+// Components
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
@@ -13,56 +17,61 @@ export const HomePageTemplate = ({
   description,
   testimonials,
   fullImage
-}) => (
-  <section className="section section--gradient">
-    <div className="container">
-      <div className="section">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="content">
+}) => {
+  description = marked(description);
+  console.log(description);
 
-              {/* Hero banner */}
-              <div
-                className="full-width-image-container margin-top-0"
-                style={{ backgroundImage: `url(${image})` }}
-              >
-                <h1
-                  className="has-text-weight-bold is-size-1"
-                  style={{
-                    boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-                    backgroundColor: '#f40',
-                    color: 'white',
-                    padding: '1rem',
-                  }}
+  return (
+    <section className="section section--gradient">
+      <div className="container">
+        <div className="section">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <div className="content">
+  
+                {/* Hero banner */}
+                <div
+                  className="full-width-image-container margin-top-0"
+                  style={{ backgroundImage: `url(${image})` }}
                 >
-                  {title}
-                </h1>
-              </div>
-
-              <div className="columns is-centered">
-                <div className="column is-10">
-                  <h2 className="has-text-weight-semibold is-size-2">
-                    {heading1}
-                  </h2>
-                  <HTMLContent className="content" content={description} />
+                  <h1
+                    className="has-text-weight-bold is-size-1"
+                    style={{
+                      boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
+                      backgroundColor: '#f40',
+                      color: 'white',
+                      padding: '1rem',
+                    }}
+                  >
+                    {title}
+                  </h1>
                 </div>
+  
+                <div className="columns is-centered">
+                  <div className="column is-10">
+                    <h2 className="has-text-weight-semibold is-size-2">
+                      {heading1}
+                    </h2>
+                    <HTMLContent className="content" content={description} />
+                  </div>
+                </div>
+                <div
+                  className="full-width-image-container"
+                  style={{ backgroundImage: `url(${fullImage})` }}
+                />
+                
+                <h2 className="has-text-weight-semibold is-size-2">
+                  {heading2}
+                </h2>
+                <Testimonials testimonials={testimonials} />
               </div>
-              <div
-                className="full-width-image-container"
-                style={{ backgroundImage: `url(${fullImage})` }}
-              />
-              
-              <h2 className="has-text-weight-semibold is-size-2">
-                {heading2}
-              </h2>
-              <Testimonials testimonials={testimonials} />
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-)
+    </section>
+  )
+}
 
 // HomePageTemplate.propTypes = {
 //   image: PropTypes.string,
@@ -90,7 +99,6 @@ export const HomePageTemplate = ({
 // }
 
 const ProductPage = ({ data }) => {
-  // console.log(data);
   const { frontmatter } = data.markdownRemark
 
   return (
