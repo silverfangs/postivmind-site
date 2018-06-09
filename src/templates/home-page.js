@@ -1,13 +1,31 @@
 // Modules
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import marked from 'marked';
+import Typed from 'typed.js';
 
 // Components
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import { HTMLContent } from '../components/Content'
+
+const options = {
+  strings: [
+    "Never give up",
+    "Believe in yourself",
+    "If you can dream it, you can do it",
+    "Stay Positive",
+    "Keep moving forward",
+    "I can, therefore I am."
+  ],
+  typeSpeed: 40,
+  backSpeed: 20,
+  backDelay: 1200,
+  shuffle: true,
+  loop: true,
+  cursorChar: ""
+}
 
 export const HomePageTemplate = ({
   image,
@@ -21,7 +39,7 @@ export const HomePageTemplate = ({
   description = marked(description);
 
   return (
-    <section className="section section--gradient">
+    <section className="ptm-hero section section--gradient">
       <div className="container">
         <div className="section">
           <div className="columns">
@@ -34,7 +52,7 @@ export const HomePageTemplate = ({
                   style={{ backgroundImage: `url(${image})` }}
                 >
                   <h1
-                    className="has-text-weight-bold is-size-1"
+                    className="ptm-hero__text has-text-weight-bold is-size-1"
                     style={{
                       boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
                       backgroundColor: '#f40',
@@ -42,7 +60,7 @@ export const HomePageTemplate = ({
                       padding: '1rem',
                     }}
                   >
-                    {title}
+                    
                   </h1>
                 </div>
   
@@ -82,20 +100,43 @@ HomePageTemplate.propTypes = {
   fullImage: PropTypes.string,
 }
 
-const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+// const ProductPage = ({ data }) => {
+//   const { frontmatter } = data.markdownRemark
 
-  return (
-    <HomePageTemplate
-      image={frontmatter.image}
-      title={frontmatter.title}
-      heading1={frontmatter.heading1}
-      heading2={frontmatter.heading2}
-      description={frontmatter.description}
-      testimonials={frontmatter.testimonials}
-      fullImage={frontmatter.full_image}
-    />
-  )
+//   return (
+//     <HomePageTemplate
+//       image={frontmatter.image}
+//       title={frontmatter.title}
+//       heading1={frontmatter.heading1}
+//       heading2={frontmatter.heading2}
+//       description={frontmatter.description}
+//       testimonials={frontmatter.testimonials}
+//       fullImage={frontmatter.full_image}
+//     />
+//   )
+// }
+
+export default class ProductPage extends Component {
+  componentDidMount() {
+    const typed = new Typed(".ptm-hero__text", options);
+  }
+
+  render() {
+    const { data } = this.props;
+    const { frontmatter } = data.markdownRemark
+
+    return (
+      <HomePageTemplate
+        image={frontmatter.image}
+        title={frontmatter.title}
+        heading1={frontmatter.heading1}
+        heading2={frontmatter.heading2}
+        description={frontmatter.description}
+        testimonials={frontmatter.testimonials}
+        fullImage={frontmatter.full_image}
+      />
+    );
+  }
 }
 
 ProductPage.propTypes = {
@@ -105,8 +146,6 @@ ProductPage.propTypes = {
     }),
   }),
 }
-
-export default ProductPage
 
 export const productPageQuery = graphql`
   query ProductPage($id: String!) {
