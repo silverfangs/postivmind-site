@@ -14,6 +14,7 @@ export default class IndexPage extends React.Component {
     //   return dateB - dateA;
     // });
 
+
     return (
       <section className="section">
         <div className="container">
@@ -36,6 +37,9 @@ export default class IndexPage extends React.Component {
                       <span> &bull; </span>
                       <small>{post.frontmatter.date}</small>
                     </p>
+                    <Link className="ptm-blog-post__img" to={post.fields.slug}>
+                      <img src={post.frontmatter.image} />
+                    </Link>
                     <p>
                       {post.excerpt}
                       <br />
@@ -79,6 +83,7 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
+            image
           }
         }
       }
