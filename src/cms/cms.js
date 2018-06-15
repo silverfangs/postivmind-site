@@ -1,6 +1,6 @@
 import CMS from 'netlify-cms'
 
-// import HomePagePreview from './preview-templates/HomePagePreview'
+import HomePagePreview from './preview-templates/HomePagePreview'
 import NormalPagePreview from './preview-templates/NormalPagePreview'
 // import BlogPagePreview from './preview-templates/BlogPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
